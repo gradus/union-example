@@ -1,4 +1,4 @@
-# Simple example of a union app
+# Simple example of a union app with socket.io
 
 ## Usage
     git clone https://gradus@github.com/gradus/union-example

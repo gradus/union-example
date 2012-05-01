@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>Union Example with socket.io</title>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <h3> Hello Earth from Union </h3>
+    <script>
+      var socket = io.connect('http://localhost');
+      socket.on('news', function (data) {
+        console.log(data);
+        socket.emit('my other event', { my: 'data' });
+      });
+    </script>
+  </body>
+</html>
+
+
+
