@@ -1,0 +1,21 @@
+{
+  "author": "Kris Windham <kriswindham@gmail.com> (krwindham@jit.su)",
+  "name": "union-example",
+  "description": "Example Use case for Flatiron/Union",
+  "version": "0.0.0",
+  "repository": {
+    "url": "https://github.com/gradus/union-example"
+  },
+  "main": "./bin/server",
+  "scripts": {
+    "start": "./bin/server"
+  },
+  "dependencies": {
+    "union": "https://github.com/flatiron/union/tarball/master"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {},
+  "engines": {
+    "node": "0.6.x"
+  }
+}
