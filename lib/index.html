@@ -1,27 +1,28 @@
 <html>
   <head>
     <title>Union Example with socket.io</title>
+    <link rel-"stylesheet" href="/stylesheets/application.css" />
+    <script src="/javascripts/jquery-1.7.2.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
   </head>
   <body>
     <h3> Hello Earth from Union </h3>
+    <div id="greetings"></div>
     <script>
-      var socket = io.connect('http://localhost');
-      socket.on('greeting', function (data) {
-        console.log(data);
-        document.write(JSON.stringify(data))
-        socket.emit('response');
+      $(document).ready(function() {
+        var socket = io.connect('http://localhost');
+        socket.on('greeting', function (data) {
+          $('#greetings').append(JSON.stringify(data))
+          socket.emit('response');
+        });
+         socket.on('destroyMessage', function (data) {
+          $('#greetings').append(JSON.stringify(data))
+          socket.emit('goodbyeResponse');
+        });
+         socket.on('goodbyeMessage', function (data) {
+          $('#greetings').append(JSON.stringify(data))
+        });
       });
-       socket.on('destroyMessage', function (data) {
-        console.log(data);
-        document.write(JSON.stringify(data))
-        socket.emit('goodbyeResponse');
-      });
-       socket.on('goodbyeMessage', function (data) {
-        console.log(data);
-        document.write(JSON.stringify(data))
-      });
-
     </script>
   </body>
 </html>
