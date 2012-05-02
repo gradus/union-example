@@ -2,7 +2,7 @@
   "author": "Kris Windham <kriswindham@gmail.com> (krwindham@jit.su)",
   "name": "union-example",
   "description": "Example Use case for Flatiron/Union",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "repository": {
     "url": "https://github.com/gradus/union-example"
   },
@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "union": "https://github.com/flatiron/union/tarball/master",
-    "socket.io": "0.9.6"
+    "socket.io": "0.9.6",
+    "ecstatic": "0.1.6"
   },
   "devDependencies": {},
   "optionalDependencies": {},
