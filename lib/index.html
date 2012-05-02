@@ -10,12 +10,12 @@
       socket.on('greeting', function (data) {
         console.log(data);
         document.write(JSON.stringify(data))
-        socket.emit('response', { destroy: 'earth' });
+        socket.emit('response');
       });
        socket.on('destroyMessage', function (data) {
         console.log(data);
         document.write(JSON.stringify(data))
-        socket.emit('goodbyeResponse', { destroy: 'earth' });
+        socket.emit('goodbyeResponse');
       });
        socket.on('goodbyeMessage', function (data) {
         console.log(data);
