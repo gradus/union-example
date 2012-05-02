@@ -7,9 +7,14 @@
     <h3> Hello Earth from Union </h3>
     <script>
       var socket = io.connect('http://localhost');
-      socket.on('news', function (data) {
+      socket.on('message', function (data) {
         console.log(data);
-        socket.emit('my other event', { my: 'data' });
+        document.write(JSON.stringify(data))
+        socket.emit('response', { my: 'data' });
+      });
+       socket.on('anotherMessage', function (data) {
+        console.log(data);
+        document.write(JSON.stringify(data))
       });
     </script>
   </body>
