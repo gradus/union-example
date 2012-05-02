@@ -6,10 +6,10 @@
     <script src="/socket.io/socket.io.js"></script>
   </head>
   <body>
-    <h3> Hello Earth from Union </h3>
+    <h3> Destroy Earth from Union </h3>
 
-    <div id="mothership">
-      <img src='/images/mothership2.jpg' />
+    <div id="destroy">
+      <img src='/images/destroy.jpg' />
     </div>
     <br />
     <h4> Socket Messages from the Mothership </h4>
@@ -18,20 +18,24 @@
       $(document).ready(function() {
         var socket = io.connect('http://localhost');
         socket.on('greeting', function (data) {
-          $('#greetings').append('<a id="hello" href="hello">' + data.hello + '</a><br />')
+          $('#greetings').append('<a id="hello" href="hello">' +
+            data.hello + '</a><br />')
           socket.emit('response');
         });
         socket.on('destroyMessage', function (data) {
-          $('#greetings').append('<a id="destroy" href="/destroy">' + data.destroy + '</a><br />')
+          $('#greetings').append('<a id="destroy" href="/destroy">' +
+            data.destroy + '</a><br />')
           socket.emit('goodbyeResponse');
         });
         socket.on('goodbyeMessage', function (data) {
-          $('#greetings').append('<a id="goodbye" href="/goodbye">' + data.goodbye + '</a><br />')
+          $('#greetings').append('<a id="goodbye" href="/goodbye">' +
+            data.goodbye + '</a><br />')
         });
       });
     </script>
   </body>
 </html>
+
 
 
 
