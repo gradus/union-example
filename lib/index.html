@@ -17,15 +17,15 @@
       $(document).ready(function() {
         var socket = io.connect('http://localhost');
         socket.on('greeting', function (data) {
-          $('#greetings').append(JSON.stringify(data))
+           $('#greetings').append((data.hello))
           socket.emit('response');
         });
          socket.on('destroyMessage', function (data) {
-          $('#greetings').append(JSON.stringify(data))
+          $('#greetings').append((data.destroy))
           socket.emit('goodbyeResponse');
         });
          socket.on('goodbyeMessage', function (data) {
-          $('#greetings').append(JSON.stringify(data))
+          $('#greetings').append((data.goodbye))
         });
       });
     </script>
