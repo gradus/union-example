@@ -2,7 +2,7 @@
   "author": "Kris Windham <kriswindham@gmail.com> (krwindham@jit.su)",
   "name": "union-example",
   "description": "Example Use case for Flatiron/Union",
-  "version": "0.0.5",
+  "version": "0.0.8",
   "repository": {
     "url": "https://github.com/gradus/union-example"
   },
