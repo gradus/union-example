@@ -7,15 +7,21 @@
     <h3> Hello Earth from Union </h3>
     <script>
       var socket = io.connect('http://localhost');
-      socket.on('message', function (data) {
+      socket.on('greeting', function (data) {
         console.log(data);
         document.write(JSON.stringify(data))
-        socket.emit('response', { my: 'data' });
+        socket.emit('response', { destroy: 'earth' });
       });
-       socket.on('anotherMessage', function (data) {
+       socket.on('destroyMessage', function (data) {
+        console.log(data);
+        document.write(JSON.stringify(data))
+        socket.emit('goodbyeResponse', { destroy: 'earth' });
+      });
+       socket.on('goodbyeMessage', function (data) {
         console.log(data);
         document.write(JSON.stringify(data))
       });
+
     </script>
   </body>
 </html>
